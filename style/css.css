@@ -1,0 +1,57 @@
+body { 
+    font-family: "Cairo", sans-serif;
+    margin: 0; 
+    padding: 0; 
+    text-transform: capitalize;
+    }
+ul {
+     list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+html {
+    scroll-behavior: smooth;
+  }
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+ }
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+ }
+@media (min-width: 768px) {
+    .container {
+      width: 800px;
+    }
+ }
+  /* Medium */
+@media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+}
+  /* Large */
+  
+@media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+}
+h1
+, h2{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: #000000;
+
+}
+a:hover{
+    color: blueviolet;
+}

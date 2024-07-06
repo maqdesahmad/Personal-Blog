@@ -1,0 +1,211 @@
+
+@import url(css.css);
+
+.gridstyle{
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+  "la la la "
+  "nav nav nav"
+  "arc arc arc"
+  "ft ft ft"
+  ;
+  }
+  .header{
+    grid-area: nav;
+  }
+ 
+
+.landing{
+  grid-area: la;
+}
+
+.articles{
+  grid-area: arc;
+}
+
+
+.footer{
+  grid-area: ft;
+}
+
+ .main-title {
+  text-transform: uppercase;
+  margin: 0 auto 20px;
+  border: 2px solid black;
+  padding: 10px 20px;
+  font-size: 30px;
+  width: fit-content;
+  position: relative;
+  z-index: 1;
+}
+.landing {
+background-image: url(../photo/back.png);
+background-size: cover;
+
+}
+.articles{
+  background-image: url(../photo/back.png);
+background-size: cover;
+
+}
+h3{
+  text-transform: uppercase;
+} 
+.header {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  position: relative;
+  -webkit-box-shadow: 0 0 10px #ddd;
+  -moz-box-shadow: 0 0 10px #ddd;
+  box-shadow: 0 0 20px #000000;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+    transition:  box-shadow 0.3;
+
+}
+
+.header .main-nav  {
+  display: flex;
+  justify-self: center;
+
+}
+
+@media (max-width: 767px) {
+  .header .main-nav {
+    margin: auto;
+  }
+}
+
+.header .main-nav > li > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  color: black;
+  padding: 0 30px;
+  overflow: hidden;
+  font-size: 20px;
+}
+@media (max-width: 767px) {
+  .header .main-nav > li > a {
+    padding: 10px;
+    font-size: 14px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header .mega-menu {
+    flex-direction: column;
+    gap: 0;
+    padding: 5px;
+  }
+}
+
+
+.landing .container {
+  min-height: calc(100vh - 72px);
+  display: flex;
+  align-items: center;
+  padding-bottom: 30px;
+}
+.landing .text {
+  flex: 1;
+}
+@media (max-width: 991px) {
+  .landing .text {
+    text-align: center;
+  }
+}
+.landing .text h1 {
+  font-size: 40px;
+  margin: 0;
+  letter-spacing: -2px;
+}
+@media (max-width: 767px) {
+  .landing .text h1 {
+    font-size: 28px;
+  }
+}
+.landing .text p {
+  font-size: 23px;
+  line-height: 1.7;
+  margin: 5px 0 0;
+  color: #666;
+  max-width: 500px;
+}
+@media (max-width: 991px) {
+  .landing .text p {
+    margin: 10px auto;
+  }
+}
+@media (max-width: 767px) {
+  .landing .text p {
+    font-size: 18px;
+  }
+}
+
+
+.articles {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+}
+.articles .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 50px;
+}
+.articles .box {
+  box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+  background-color: white;
+  border-radius: 6px;
+  overflow: hidden;
+  transition:  box-shadow  0.3;
+}
+
+.articles .box img {
+  width: 100%;
+  max-width: 100%;
+}
+.articles .box .content {
+  padding: 20px;
+}
+.articles .box .content h3 {
+  margin: 0;
+}
+.articles .box .content p {
+  margin: 10px 0 0;
+  line-height: 1.5;
+  color: #777;
+}
+.articles .box .info {
+  padding: 20px;
+  border-top: 1px solid #e6e6e7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.articles i{
+  cursor: pointer;
+}
+
+
+
+.footer .copyright {
+  padding: 25px 0;
+  text-align: center;
+  color: rgb(161, 161, 229);
+  margin: 0;
+  background-color: #242424; 
+  width: 100%;
+
+} 
